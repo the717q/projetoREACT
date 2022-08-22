@@ -23,3 +23,27 @@ Your app is ready to be deployed!
 Deploys the app into the github repository.
 
 [gh-pages -b master -d dist] (gh-pages -b {branch} -d {folder})
+
+
+All the scripts and dependencies are shown below: 
+
+
+```javascript
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "gh-pages": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "source-map-explorer": "^2.5.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "start": "parcel ./public/index.html",
+    "build": "parcel build ./public/index.html",
+    "deploy": "gh-pages -b master -d dist",
+    "analyze": "source-map-explorer ./dist/*js"
+  },
+  ```
